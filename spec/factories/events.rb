@@ -13,10 +13,10 @@
 #
 FactoryBot.define do
   factory :event do
-    title { "Baking" }
+    title { 'Baking' }
     description { "Let's all learn baking basic. We have invited over a pastry chef" }
-    location { "My house" }
-    schedule { "2021-02-27 13:46:23" }
+    location { 'My house' }
+    schedule { '2021-02-27 13:46:23' }
     creator_id { create(:user).id }
   end
 end

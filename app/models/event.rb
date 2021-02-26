@@ -23,5 +23,4 @@ class Event < ApplicationRecord
 
   scope :past_events, -> { where('schedule < ?', Date.today) }
   scope :upcoming_events, -> { where('schedule >= ?', Date.today) }
-  
 end

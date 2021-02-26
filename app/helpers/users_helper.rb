@@ -7,7 +7,7 @@ module UsersHelper
     if user.attended_events.past_events.empty?
       render partial: 'users/alert', locals: { text: 'NO PAST EVENTS' }
     else
-      user.attended_events.past_events.each do |event|        
+      user.attended_events.past_events.each do |event|
         return render partial: 'layouts/event', locals: { event: event }
       end
     end

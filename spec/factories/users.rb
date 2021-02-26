@@ -13,6 +13,6 @@
 #
 FactoryBot.define do
   factory :user do
-    username { ["Adam", "Sam", "Mike", "Seth", "Julius"].sample }
+    username { %w[Adam Sam Mike Seth Julius].sample }
   end
 end

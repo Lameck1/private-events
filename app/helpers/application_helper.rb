@@ -13,7 +13,7 @@ module ApplicationHelper
     flash[:notice] = 'Please log in!'
     redirect_to(login_path)
   end
-  
+
   def display_login
     link_to('Login', login_path, class: 'nav-link text-light bg-secondary mx-2 rounded-pill') unless logged_in?
   end
@@ -27,7 +27,8 @@ module ApplicationHelper
   end
 
   def display_logout
-    link_to 'Log Out', logout_path, method: :delete, class: 'nav-link text-light bg-secondary mx-2 rounded-pill' if logged_in?
-  end
+    return unless logged_in?
 
+    link_to 'Log Out', logout_path, method: :delete, class: 'nav-link text-light bg-secondary mx-2 rounded-pill'
+  end
 end

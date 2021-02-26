@@ -1,5 +1,4 @@
 class AccessController < ApplicationController
-
   def new; end
 
   def create
