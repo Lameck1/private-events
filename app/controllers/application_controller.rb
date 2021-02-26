@@ -1,19 +1,14 @@
 class ApplicationController < ActionController::Base
   layout 'application'
 
-  before_action :set_username
+  def logged_in?
+    session[:user_id] != nil
+  end
 
-  protected
-    def set_username
-      @username = cookies[:username]
-    end
+  def confirm_logged_in
+    return if logged_in?
 
-    def confirm_logged_in
-      if session[:user_id].present?
-        true
-      else
-        flash[:error] = 'Please log in!'
-        redirect_to(login_path)
-      end
-    end
+    flash[:notice] = 'Please log in!'
+    redirect_to(login_path)
+  end
 end
