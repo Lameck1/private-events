@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    flash[:success] = 'Sign Up successful!'
+    flash[:notice] = 'Sign Up successful!'
     redirect_to(login_path)
   end
 
