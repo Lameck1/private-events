@@ -16,8 +16,6 @@ Building a site similar to a private Eventbrite which allows users to create eve
 
 ![screenshot](./screenshot.png)
 
-## [Live Demo]()
-
 ## Built With
 
 - Ruby v3.0.0
