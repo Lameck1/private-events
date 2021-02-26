@@ -1,2 +1,25 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="container">
+  <div class="row">
+
+    <div class="col-8">
+      <div class="p-3 mt-5 shadow mb-5 bg-white rounded ">
+        <h3 class="fw-bold text-capitalize"><%=@event.title%></h3>
+        <p class="lead"><%=@event.description%></p>
+        <small class="fst-italics"><%=@event.schedule%></small>
+        <p><%=@event.location%></p>        
+      </div>    
+    </div>
+
+    <div class="col-4">
+      <div class="p-3 mt-5 shadow mb-5 bg-white rounded">
+        <h3 class="fw-bold text-capitalize p-2">Attendees</h3>
+
+        <ul class="list-group">
+          <% @event.attendees.each do |attendee| %>
+            <li class="list-group-item"><%= attendee.username %></li>
+          <%end%>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
