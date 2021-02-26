@@ -14,5 +14,8 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'can create an event successfully' do
+    event = create(:event)
+    expect(event).to be_valid
+  end
 end

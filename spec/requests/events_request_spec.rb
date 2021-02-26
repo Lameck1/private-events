@@ -4,21 +4,15 @@ RSpec.describe "Events", type: :request do
 
   describe "GET /index" do
     it "returns http success" do
-      get "/events/index"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /new" do
-    it "returns http success" do
-      get "/events/new"
+      get events_path
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /show" do
     it "returns http success" do
-      get "/events/show"
+      event = create(:event)
+      get event_path(event)
       expect(response).to have_http_status(:success)
     end
   end
