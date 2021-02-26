@@ -18,7 +18,7 @@ Building a site similar to a private Eventbrite which allows users to create eve
 
 ## Built With
 
-- Ruby v3.0.0
+- Ruby v2.7.2
 - Rails 6.1.2
 - Postgresql
 
