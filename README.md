@@ -38,21 +38,21 @@ Building a site similar to a private Eventbrite which allows users to create eve
     ```
 * At this point, you still don't have the Postgress database. Run the following to get setup:
 
-  - [] Ensure that postgresql service is up and runnning
+  - Ensure that postgresql service is up and runnning
         ```
-        sudo service postgresql star
+        sudo service postgresql start
         ```
-  - [] Create the database
+  - Create the database
         ```
         rails db:create
         ```
 
-  - [] Migrate the database
+  - Migrate the database
         ```
         rails db:migrate
         ```
 
-  - [] To get test data run
+  - To get test data run
         ```
         rails db:seed
         ```
