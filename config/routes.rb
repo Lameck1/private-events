@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   root to: 'events#index'
 
   get 'login' => 'access#new'
+  post   'login'   => 'access#create'
   delete 'logout' => 'access#destroy'
 end
