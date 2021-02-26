@@ -1,2 +1,29 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<div class="container mx-auto mt-5 shadow p-3 mb-5 bg-white rounded" >
+  <h3>Create Event</h3>
+
+  <div>
+
+  <%= form_with model: @event do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control"%>
+
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form-control" %>
+
+      <%= f.label :location %>
+      <%= f.text_field :location, class: "form-control" %>
+      
+      <%= f.label :schedule %>
+      <%= f.date_field :schedule, class: "form-control" %>    
+    </div>
+
+    <%= f.submit "Create Event", class: "btn btn-primary" %>
+
+    </div>
+
+    <%= error_messages_for(f.object) %>
+
+  <%end%> 
+
+</div>
