@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :confirm_logged_in, only: %i[new create]
+
   def index
     @past_events = Event.past_events
     @upcoming_events = Event.upcoming_events
@@ -14,9 +16,10 @@ class EventsController < ApplicationController
   end
 
   def create
-    @user = User.find(session[:current_user_id])
+    @user = User.find(session[:user_id])
     @event = @user.created_events.build(event_params)
     if @event.save
+      flash[:notice] = 'Event saved!'
       redirect_to @event
     else
       render :new
