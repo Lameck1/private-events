@@ -16,6 +16,8 @@ Building a site similar to a private Eventbrite which allows users to create eve
 
 ![screenshot](./screenshot.png)
 
+## [Live Demo](https://createprivateevent.herokuapp.com/)
+
 ## Built With
 
 - Ruby v2.7.2
