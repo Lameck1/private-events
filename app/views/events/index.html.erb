@@ -1,2 +1,21 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<div class="container mx-auto p-4 display shadow-sm p-3 mb-5 bg-white rounded mt-5">
+  <h2 class="display-2">Events</h2>
+
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="container-fluid past-events col-6">
+        <h3>Past </h3>
+
+        <% @past_events.each do |event| %>
+        <%= render partial: 'layouts/event', locals: {event: event} %>
+      <% end %>
+      </div>
+
+      <div class="container-fluid upcoming-events col-6">
+        <h3> Upcoming </h3>
+        <% @upcoming_events.each do |event| %>
+          <%= render partial: 'layouts/event', locals: {event: event} %>
+        <% end %></div>
+      </div>
+  </div>
+</div>
