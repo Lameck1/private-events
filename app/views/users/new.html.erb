@@ -1,2 +1,12 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="w-50 mx-auto mt-5 shadow p-3 mb-5 bg-white rounded">
+<h1>User Sign Up </h1>
+<div>
+<%= form_with model: @user do |f| %>
+  <div class= "form-group">
+  <%= f.label :username %>
+  <%= f.text_field :username, class: "form-control"%>
+  </div>
+  <%= f.submit "Sign Up", class: "btn btn-primary"%>
+<%end%>
+</div>
+</div>
