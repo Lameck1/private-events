@@ -1,46 +1,36 @@
 <div class=" container row mx-auto">
-<div class="col-8 mt-5 mx-auto shadow p-3 mb-5 bg-white rounded row">
+  <div class="col-8 mt-5 mx-auto shadow p-3 mb-5 bg-white rounded row">
 
-  <div class="container">
+    <div class="container">
 
-    <h3 class="fw-bold">User Events</h3>
-    <div class="row">
-      <% @created_events.each do |event| %>
+      <h3 class="fw-bold">User Events</h3>
+      <div class="row">
+        <%= display_created_events(@user, 'layouts/event', @user.created_events) %>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container mt-3">
+      <h3 class="fw-bold">Attending</h3>
+      <div class="row mt-2">
+
         <div class="col-6">
-        <%= render partial: "layouts/event", locals: {event: event} %>
+
+          <div>
+            <h3>Attended Events</h3>
+            <%= display_past_events(@user, 'layouts/event', @user.attended_events.past_events) %>
+          </div>
+
         </div>
-      <%end%>
+
+        <div class="col-6">
+          <div>
+            <h3>Upcoming Events</h3>
+              <%= display_upcoming_events(@user, 'layouts/event', @user.attended_events.upcoming_events) %>
+          </div>
+        </div>    
+      </div>  
     </div>
-  </div>
-  <hr>
-  <div class="container mt-3">
-  <h3 class="fw-bold">Attending</h3>
-  <div class="row mt-2">
-
-    <div class="col-6">
-
-      <div>
-        <h3>Previously Attended Events</h3>
-        <%= display_past_events(@user) %>
-      </div>
-
-    </div>
-
-    <div class="col-6">
-
-      <div>
-        <h3>Upcoming Events</h3>
-          <%= display_upcoming_events(@user) %>
-      </div>
-
-    </div>
-
-    
-  </div>
-
-  
-  </div>
-</div>
-  
- 
+  </div> 
 </div>

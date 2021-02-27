@@ -5,17 +5,12 @@
     <div class="row">
       <div class="container-fluid past-events col-6">
         <h3>Past </h3>
-
-        <% @past_events.each do |event| %>
-        <%= render partial: 'layouts/event', locals: {event: event} %>
-      <% end %>
+        <%= events('layouts/event', @past_events) %>
       </div>
 
       <div class="container-fluid upcoming-events col-6">
         <h3> Upcoming </h3>
-        <% @upcoming_events.each do |event| %>
-          <%= render partial: 'layouts/event', locals: {event: event} %>
-        <% end %></div>
+        <%= events('layouts/event', @upcoming_events) %>
       </div>
   </div>
 </div>
