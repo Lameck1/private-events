@@ -1,0 +1,11 @@
+<div class="row">
+<div class="col-lg-4 p-3 mx-auto shadow p-3 mb-5 bg-white rounded mt-5">
+  <ul class="list-group">
+    <%@users.each do |user| %>
+      <li class="list-group-item d-flex justify-content-between">
+        <%=user.username%>
+      </li>
+    <%end%>
+  </ul>
+</div>
+</div>
