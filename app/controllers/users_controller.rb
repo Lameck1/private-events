@@ -19,6 +19,8 @@ class UsersController < ApplicationController
     @created_events = @user.created_events
   end
 
+  private
+
   def user_params
     params.require(:user).permit(:username)
   end

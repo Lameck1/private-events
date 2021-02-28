@@ -7,7 +7,12 @@
         <p class="lead"><%=@event.description%></p>
         <small class="fst-italics"><%=@event.schedule%></small>
         <p><%=@event.location%></p>        
-      </div>    
+      </div> 
+      <div class="attendance my-2 border-top mx-4">
+        <%= display_host_info(@event) %>
+        <%= display_going_button(@event) %>
+        <%= display_going_msg(@event) %>
+      </div>   
     </div>
 
     <div class="col-4">

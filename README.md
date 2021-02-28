@@ -54,11 +54,6 @@ Building a site similar to a private Eventbrite which allows users to create eve
         rails db:migrate
         ```
 
-  - To get test data run
-        ```
-        rails db:seed
-        ```
-
 * To interact with the project, run:
     ```
     rails server
@@ -71,6 +66,7 @@ Building a site similar to a private Eventbrite which allows users to create eve
     ```
 * Go to the browser and enter 
     ```http://localhost:3000```
+
 
 ### Prerequisites
 

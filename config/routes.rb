@@ -3,11 +3,13 @@ Rails.application.routes.draw do
 
   resources :users
   resources :events, only: [:index, :new, :create, :show]
-  resources :events_attendances, only: [:create, :destroy, :update]
+
+  resources :event_attendances
 
   root to: 'events#index'
 
   get 'login' => 'access#new'
   post   'login'   => 'access#create'
   delete 'logout' => 'access#destroy'
+
 end
