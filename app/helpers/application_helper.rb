@@ -24,6 +24,7 @@ module ApplicationHelper
 
   def display_username
     return unless logged_in?
+
     link_to user.username, user_path(session[:user_id]), class: 'nav-link text-light'
   end
 
